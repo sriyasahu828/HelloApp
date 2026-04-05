@@ -1,11 +1,22 @@
-public class HelloApp {
+public class HelloWorld {
     public static void main(String[] args) {
-        System.out.print("Hello ");
-        
+
         if (args.length == 0) {
-            System.out.print("World");
+            System.out.println("Hello, World!");
         } else {
-            System.out.print(String.join(", ", args));
+            System.out.print("Hello, ");
+
+            boolean first = true;
+
+            for (String name : args) {
+                if (!first) {
+                    System.out.print(", ");
+                }
+                System.out.print(name);
+                first = false;
+            }
+
+            System.out.println("!");
         }
     }
 }
